@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :projects
+
+  get 'pages/contact', to: 'pages#contact'
+  get 'pages/about', to: 'pages#about'
+  #get 'error', to: "pages#error"
+
+  get 'blog', to: redirect("http://msn.com") 
+
+  resources :projects  
   
-  
-  root 'projects#index'  
+  root 'pages#home'
+  #get '*path', to: redirect("/error")
 end

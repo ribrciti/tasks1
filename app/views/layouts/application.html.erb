@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= image_tag('logos/rails.png', size: '50x40') %>
 
-<%= yield %>
+	<%= render 'layouts/navbar' %>
+
+	<%= yield %>
 
 </body>
 </html>

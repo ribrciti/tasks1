@@ -3,7 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :title
       t.text :description
-      t.decimal :percent_complete
+      t.decimal :percent_complete,   default: 0
 
       t.timestamps null: false
     end
