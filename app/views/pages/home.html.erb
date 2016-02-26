@@ -1,9 +1,5 @@
-<h1>Pages#home</h1>
-<% @projects.each do |project| %>	
-	<p><strong>
-		<%= project.title %></strong> -
-		<em><%= project.description %></em> ---
-		<%= project.percent_complete %>
-		<%= "*** #{project.percent_complete}" if !project.percent_complete %>
-	</p>
-<% end %>
+<h1>Home Page</h1>
+
+<div class="homepage-projects">
+	<%= render 'projects/projects' %>
+</div>
