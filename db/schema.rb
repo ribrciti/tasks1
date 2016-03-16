@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309152018) do
+ActiveRecord::Schema.define(version: 20160310200809) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title",            limit: 255
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160309152018) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.boolean  "completed"
+    t.text     "task_file",   limit: 65535
   end
 
   add_index "tasks", ["project_id"], name: "index_tasks_on_project_id", using: :btree
