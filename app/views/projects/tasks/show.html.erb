@@ -1,0 +1,30 @@
+<hr>
+
+<h2>Task:  <%= @task.title %></h2>
+
+<p><strong>Desc:  </strong><%= @task.description %></p>
+
+<h4>Task created at:  <%= @task.created_at.strftime("%m-%e-%y %H:%M") %></h4>
+
+<% if @task.created_at != @task.updated_at %>
+	<h4>Updated at:  <%= @task.updated_at.strftime("%m-%e-%y %H:%M") %></h4>
+<% end %>
+
+<% if @task.completed == true %>
+	<h4><em>Task is completed</em></h4>
+<% else %>
+	<h4><em>Task is pending</em></h4>
+<% end %>
+
+<% if @task.task_file.blank? %>
+	<p>No File "Attachment" is currently available</p>
+<% else %>
+	<p><%= link_to "Attachment", @task.task_file.to_s %></p>
+<% end %>
+
+<%= link_to "Edit", edit_project_task_path(@task.project_id, @task.id) %>
+
+<%= link_to "Back", project_path(@task.project_id) %>
+
+
+

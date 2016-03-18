@@ -15,6 +15,7 @@ gem 'carrierwave'             # for file uploads
 gem 'mini_magick', '~> 3.5.0'
 gem 'fog'
 gem 'figaro'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
