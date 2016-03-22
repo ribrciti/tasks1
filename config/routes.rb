@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'pages/contact', to: 'pages#contact'
   get 'pages/about', to: 'pages#about'
   #get 'error', to: "pages#error"
